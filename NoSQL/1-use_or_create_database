@@ -1,4 +1,4 @@
 #!/bin/bash
 # Script that creates or uses the database my_db
 
-mongosh --eval "use my_db" --quiet
+mongo --eval "db = db.getSiblingDB('my_db'); print('switched to db ' + db.getName())" --quiet
