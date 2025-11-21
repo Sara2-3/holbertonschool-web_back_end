@@ -1,4 +1,4 @@
 #!/bin/bash
 # Script that lists all databases in MongoDB
 
-mongo --eval "db.adminCommand('listDatabases').databases.forEach(function(d){print(d.name)})" --quiet
+mongosh --eval "show dbs" --quiet
